@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Runtime data
+data/reviews.db
+data/reports/*.xlsx
+data/reports/*.json
+data/imports/upload_*
+data/faiss/
+data/chromadb/
+data/milvus/
+data/etcd/
+data/minio/
+data/processed/
+
+# Logs
+*.log
+data/agent.log
+
+# Environment/config secrets
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LangGraph checkpoints
+data/langgraph_checkpoints.db

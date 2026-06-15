@@ -1,0 +1,49 @@
+# E-Commerce Review Analysis System v2 Configuration
+
+llm:
+  api_key: "${DEEPSEEK_API_KEY}"
+  base_url: "https://api.deepseek.com/v1"
+  model: "deepseek-chat"
+  temperature: 0.1
+  max_tokens: 2048
+
+milvus:
+  host: "localhost"
+  port: 19530
+
+embedding:
+  model: "paraphrase-multilingual-MiniLM-L12-v2"
+
+ecommerce_rules:
+  painpoint_categories:
+    quality: ["质量差", "坏了", "破损", "瑕疵", "掉色", "起球", "脱线"]
+    logistics: ["发货慢", "物流", "快递", "没收到", "包装烂"]
+    service: ["客服", "态度", "不理人", "回复慢", "不处理"]
+    color_diff: ["色差", "和图片不", "颜色不对"]
+    size: ["太小", "太大", "不合身", "偏大", "偏小", "尺码"]
+    value_for_money: ["不值", "贵了", "性价比", "便宜没好货"]
+
+alerts:
+  enabled: true
+  rules:
+    high_freq_negative:
+      enabled: true
+      threshold: 15
+      time_window_hours: 24
+    sentiment_shift:
+      enabled: true
+      stddev_multiplier: 2.0
+    new_pain_point:
+      enabled: true
+    volume_spike:
+      enabled: true
+      multiplier: 3.0
+
+data:
+  db_path: "data/reviews.db"
+  import_dir: "data/imports"
+  report_dir: "data/reports"
+  faiss_dir: "data/faiss"
+
+logging:
+  level: "INFO"
