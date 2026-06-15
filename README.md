@@ -7,3 +7,4 @@
 4. 构建Milvus向量RAG知识库，辅助业务迭代归因 将历史评价数据、品类痛点、优化方案进行向量化处理，存入Milvus向量数据库搭建专属RAG知识库；针对新增评价，通过相似度检索匹配历史同类问题，辅助完成痛点溯源与原因分析，输出更贴合业务的产品优化建议。 
 5. 接口开发与容器化部署，完成业务闭环 基于FastAPI开发标准化后端接口，对接前端可视化看板，实现情感分布统计、问题TOP排行、SKU维度对比等数据可视化展示；通过Docker完成项目容器化打包部署，统一运行环境，实现开箱即用，完成从数据处理到业务展示的完整闭环。
 <img width="1914" height="990" alt="微信图片_20260615220934_260_13" src="https://github.com/user-attachments/assets/512a1445-c9b9-44e9-bdb8-a224e671c08c" />
+<img width="1912" height="687" alt="image" src="https://github.com/user-attachments/assets/22b63601-4543-44d7-910a-765243e8c0c1" />
